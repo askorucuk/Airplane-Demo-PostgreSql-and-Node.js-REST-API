@@ -1,0 +1,45 @@
+extends layouts/main.pug
+
+block content  
+  .container
+    .row(style='padding-top: 25px; padding-bottom: 15px; padding-left: 100px;')
+      .spinner-grow.text-primary(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-secondary(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-success(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-danger(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-warning(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-info(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-light(role='status')
+        span.visually-hidden Loading...
+      .spinner-grow.text-dark(role='status')
+        span.visually-hidden Loading...
+    h1(style='padding-bottom: 10px;') CUSTOMER ADD
+    form(action="/admin/add" method="POST")
+      .form-floating.mb-3
+        input#customer_name.form-control(type='text', name='customer_name')
+        label(for='customer_name') Customer Name
+      .form-floating.mb-3
+        input#passport_no.form-control(type='text', name='passport_no')
+        label(for='passport_no') Passport Number
+      .form-floating.mb-3
+        input#email.form-control(type='email', name='email')
+        label(for='email') Email address
+      .form-floating.mb-3
+        input#adress.form-control(type='text', name='adress')
+        label(for='adress') Adress
+      .form-floating.mb-3
+        input#country.form-control(type='text', name='country')
+        label(for='country') Country Code
+      .form-floating.mb-3
+        input#isffc.form-control(type='text', name='isffc')
+        label(for='isffc') FFC
+      .form-floating.mb-3
+        input#transaction_record.form-control(type='text', name='transaction_record')
+        label(for='transaction_record') Transection Record
+      button.btn.btn-primary(type='submit') Submit

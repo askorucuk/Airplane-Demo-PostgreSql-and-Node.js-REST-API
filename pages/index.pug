@@ -1,0 +1,22 @@
+extends layouts/main.pug
+
+block content 
+  #carouselExampleDark.carousel.carousel-dark.slide(data-bs-ride='carousel')
+    ol.carousel-indicators
+      li.active(data-bs-target='#carouselExampleDark', data-bs-slide-to='0')
+      li(data-bs-target='#carouselExampleDark', data-bs-slide-to='1')
+      li(data-bs-target='#carouselExampleDark', data-bs-slide-to='2')
+    .carousel-inner
+      .carousel-item.active(data-bs-interval='10000')
+        img.d-block.w-100(src='https://assets.currencycloud.com/wp-content/uploads/2019/11/aircraft-istock-ipopba.jpg',  height="900", alt='')
+      .carousel-item(data-bs-interval='2000')
+        img.d-block.w-100(src='http://s3.amazonaws.com/themorning-aruna/wp-content/uploads/2020/03/15171144/airplane-plane-flight-900.jpg', height="900", alt='')
+      .carousel-item
+        img.d-block.w-100(src='https://infografiklerlehome.files.wordpress.com/2019/02/airplane-flight-sunset.jpg', height="900", alt='').
+    a.carousel-control-prev(href='#carouselExampleDark', role='button', data-bs-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.visually-hidden Previous
+    a.carousel-control-next(href='#carouselExampleDark', role='button', data-bs-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.visually-hidden Next
+  

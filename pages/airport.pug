@@ -1,0 +1,19 @@
+extends layouts/main.pug
+
+block content 
+  .col-lg-8
+  table.table.table-bordered.table-secondary.table-striped.table-hover
+    thead.table-dark
+      tr
+        th(scope='col') Airport Code
+        th(scope='col') Airport Name
+        th(scope='col') City
+        th(scope='col') Country
+
+    tbody(style='background-color:ghostwhite;')
+      each airport in airports
+        tr
+          td #{airport.airport_code}
+          td #{airport.name_}
+          td #{airport.city}
+          td #{airport.country}

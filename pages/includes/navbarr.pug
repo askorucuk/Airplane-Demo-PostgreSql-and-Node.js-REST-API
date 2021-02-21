@@ -1,0 +1,27 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='http://localhost:3000/', style='font-size: xx-large; padding-inline-start: 100px; padding-right: 50px; font-style: inherit;') AIRLINE
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href='http://localhost:3000/', class=(path == '/'?'nav-link active':'nav-link') , style='padding-right: 25px;', aria-current='page' ) Home
+        li.nav-item
+          a.nav-link(style='padding-right: 25px;', href='http://localhost:3000/admin/add', class=(path == '/admin/add'?'nav-link active':'nav-link')) Admin Panel
+        li.nav-item
+          a.nav-link(style='padding-right: 25px;', href='http://localhost:3000/customers', class=(path == '/customers'?'nav-link active':'nav-link')) Customers
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(role='button', data-bs-toggle='dropdown', aria-expanded='false')
+           | FFC
+          ul.dropdown-menu(aria-labelledby='navbarDropdown')
+            li
+              a.dropdown-item(href='/goldclass') Gold Class
+            li
+              a.dropdown-item(href='/silverclass') Silver Class
+            li
+              a.dropdown-item(href='/bronzeclass') Bronze Class
+        li.nav-item
+          a.nav-link(style='padding-right: 25px; padding-left:25px;', href='http://localhost:3000/airports', class=(path == '/airports'?'nav-link active':'nav-link')) Airports
+        li.nav-item
+          a.nav-link(href='http://localhost:3000/flights', class=(path == '/flights'?'nav-link active':'nav-link')) Flights 

@@ -1,0 +1,32 @@
+extends layouts/main.pug
+
+block content 
+  .col-lg-8
+  table.table.table-hover
+    thead.table-active
+      tr
+        th(scope='col') Customer Name
+        th(scope='col') Passport Number
+        th(scope='col') E-mail
+        th(scope='col') Adress
+        th(scope='col') Country Code
+        th(scope='col') FFC
+        th(scope='col') Transection Record
+        th(scope='col')
+    tbody(style='background-color:ghostwhite;')
+      each customer in customers
+        tr
+          td #{customer.customer_name}
+          td #{customer.passport_no}
+          td #{customer.email}
+          td #{customer.adress}
+          td #{customer.country}
+          td #{customer.isffc}
+          td #{customer.transaction_record} 
+          //- td
+          //-   form(action="/customers/:passport_no" method='POST')     
+          //-     input(type='hidden' name='passport_no' value=`${customer.passport_no}`)
+          //-     button(type='submit').btn.btn-danger.btn-sm DELETE
+
+
+    

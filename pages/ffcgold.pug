@@ -1,0 +1,39 @@
+extends layouts/main.pug
+
+block content 
+  .container
+    .jumbotron(style="padding-bottom:15px;")
+     h1.display-4 Hello Ladies and Gentlemen
+     p.lead
+       | Let's tell about our customer segmentation. Our customer segmentation is consists of gold, silver and bronze grades..
+     hr.my-4
+     p
+       | Gold class customer transection records more than 5000 miles.Also gold class customers have golden plane rosette.
+     p.lead
+       a.btn.btn-lg(href='http://localhost:3000/customers', role='button' , style='background-color:goldenrod;') Go To Customers
+    .col-lg-8
+    table.table.table-hover
+      thead.table(style='background-color:goldenrod;')
+        tr
+          th(scope='col') Customer Name
+          th(scope='col') Passport Number
+          th(scope='col') E-mail
+          th(scope='col') Adress
+          th(scope='col') Country Code
+          th(scope='col') FFC
+          th(scope='col') Transection Record
+          th(scope='col') Rosette
+      tbody(style='background-color:lightgoldenrodyellow;')
+        each ffcg in ffcgold
+          tr
+            td #{ffcg.customer_name}
+            td #{ffcg.passport_no}
+            td #{ffcg.email}
+            td #{ffcg.adress}
+            td #{ffcg.country}
+            td #{ffcg.isffc}
+            td #{ffcg.transaction_record} 
+            td 
+              img(src="https://i.resimyukle.xyz/ey1yLH.jpg",width="50",  height="50")
+
+

@@ -1,0 +1,24 @@
+extends layouts/main.pug
+
+block content 
+  .col-lg-8
+  table.table.table-bordered.table-dark.table-striped.table-hover
+    thead.table-secondary
+      tr
+        th(scope='col') Flight Number
+        th(scope='col') Leg Number
+        th(scope='col') Departure Airport Code
+        th(scope='col') Arrival Airport Code
+        th(scope='col') Scheduled Departure Time
+        th(scope='col') Scheduled Arrival Time
+        th(scope='col') Mileages
+    tbody(style='background-color:ghostwhite;')
+      each flight in flights
+        tr
+          td #{flight.flight_number}
+          td #{flight.leg_number}
+          td #{flight.departure_airportcode}
+          td #{flight.arrival_airportcode}
+          td #{flight.scheduled_departuretime}
+          td #{flight.scheduled_arrivaltime}
+          td #{flight.mileages} 
